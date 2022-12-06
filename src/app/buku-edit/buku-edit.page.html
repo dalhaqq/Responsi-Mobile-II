@@ -1,0 +1,8 @@
+<section>
+  <h2>Edit Buku</h2>
+    <label>Judul</label>
+    <ion-input type="text" [(ngModel)]="judul" required="required"></ion-input>
+    <label>Nama Penulis</label>
+    <ion-input type="text" [(ngModel)]="penulis" required="required"></ion-input>
+    <button type="submit" (click)="editBuku()" class="btn btn-main">Save</button>
+</section>

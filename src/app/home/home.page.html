@@ -1,0 +1,35 @@
+
+<ion-content>
+  <a class="btn btn-main" (click)="logout()">
+    Logout
+  </a>
+  <section>
+  <table>
+    <thead>
+      <tr>
+        <th>Judul</th>
+        <th>Penulis</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let mBuku of buku">
+        <td>{{ mBuku.judul }}</td>
+        <td>{{ mBuku.penulis }}</td>
+        <td>
+          <a [routerLink]="['/buku-edit/', mBuku.id]">
+            Edit
+          </a>
+          <span> / </span>
+          <a (click)="deleteBuku(mBuku.id)">
+            Hapus
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <a class="btn btn-main" [routerLink]="['/buku-tambah']">
+    Tambah Buku
+  </a>
+</section>
+</ion-content>

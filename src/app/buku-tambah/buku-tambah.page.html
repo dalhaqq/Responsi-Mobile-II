@@ -1,0 +1,8 @@
+<section>
+  <h2>Tambah Buku</h2>
+    <label>Judul</label>
+    <ion-input type="text" [(ngModel)]="judul" required="required"></ion-input>
+    <label>Nama Penulis</label>
+    <ion-input type="text" [(ngModel)]="penulis" required="required"></ion-input>
+    <button type="submit" (click)="addBuku()" class="btn btn-main">Create</button>
+</section>
